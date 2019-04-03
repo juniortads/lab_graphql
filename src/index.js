@@ -24,9 +24,9 @@ const resolvers = {
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  //cache: new RedisCache({
-    //host: '127.0.0.1',
-  //}),
+  cache: new RedisCache({
+    host: '127.0.0.1',
+  }),
   engine: {
     apiKey: process.env.ENGINE_API_KEY
   } 
