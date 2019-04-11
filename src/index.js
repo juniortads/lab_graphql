@@ -24,9 +24,10 @@ const resolvers = {
 const server = new ApolloServer({ 
   typeDefs, 
   resolvers,
-  //cache: new RedisCache({
-    //host: '127.0.0.1',
-  //}),
+  cache: new RedisCache({
+    host: 'clustercfg.cache-graphql.4m0ruu.sae1.cache.amazonaws.com',
+    port: 6379
+  }),
   engine: {
     apiKey: process.env.ENGINE_API_KEY
   } 
